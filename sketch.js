@@ -16,7 +16,6 @@ function setup() {
   
   tileCount = random(10);
   strokeCap(PROJECT);
-  
 }
 
 function draw() {
@@ -25,7 +24,6 @@ function draw() {
 
   //array of sqaures
   particles.push(new Element(createVector(mouseX, mouseY)));
-
   for(let i = particles.length - 1; i >= 0; i--){
     let p = particles[i];
     p.run();
@@ -42,12 +40,13 @@ function grid(){
   //grid layout
   for (var gridY = 0; gridY < tileCount; gridY++) {
     for (var gridX = 0; gridX < tileCount; gridX++) {
-
       var posX = width / tileCount * gridX;
       var posY = height / tileCount * gridY;
+
 //select one of two options for grid
      var toggle = int(random(0, 3));
-    
+
+//Color blending    
      let interA = lerpColor(col1, col2, random(1));
      let inter2 = lerpColor(col3, col4, random(1));
     
@@ -97,7 +96,7 @@ class Element {
   update(){
     this.vel.add(this.accel);
     this.loc.add(this.vel);
-    this.lifespan -= random(2);
+    this.lifespan -= random(1,3);
     this.H1 += 1;
   }
 
