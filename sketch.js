@@ -97,7 +97,7 @@ class Element {
   update(){
     this.vel.add(this.accel);
     this.loc.add(this.vel);
-    this.lifespan -= random(2,5);
+    this.lifespan -= random(2);
     this.H1 += 1;
   }
 
