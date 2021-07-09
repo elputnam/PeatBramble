@@ -54,7 +54,7 @@ function draw() {
       
   if (frameCount == 500){
     next = createButton('next').parent(link); 
-    next.position(width*.75, height*.75);
+    next.position(width*.25, height*.75);
   }
   
   
