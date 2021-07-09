@@ -6,6 +6,12 @@ var col3;
 var col4;
 let particles = [];
 
+let link;
+let next; 
+let link1;
+let link2;
+let link3;
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   colorMode(HSB, 360, 100, 100, 100);
@@ -14,12 +20,17 @@ function setup() {
   col3 = color(200, 50, 100, 60);
   col4 = color(300, 100, 100, 60);
   
+  link1 = createA('http://127.0.0.1:5501/GlibDive/', '');
+  link2 = createA('http://127.0.0.1:5501/AtTheEndOf/', '');
+
   tileCount = random(10);
   strokeCap(PROJECT);
 }
 
 function draw() {
   background(10, 1);
+
+  
   grid();
 
   //array of sqaures
@@ -31,6 +42,21 @@ function draw() {
       particles.splice(i, 1);
     }
   }
+
+    //choice
+    let choice = int(random(0, 2));;  
+    if ( choice == 0){
+       link = link1;
+        }
+    if (choice == 1){
+        link = link2;
+      }  
+      
+  if (frameCount == 500){
+    next = createButton('next').parent(link); 
+    next.position(width*.75, height*.75);
+  }
+  
   
 }
 
