@@ -6,8 +6,8 @@ var col3;
 var col4;
 let particles = [];
 
-let link;
-let next; 
+//let link;
+//let next; 
 //let link1;
 //let link2;
 //let link3;
@@ -20,7 +20,7 @@ function setup() {
   col3 = color(200, 50, 100, 60);
   col4 = color(300, 100, 100, 60);
   
-  link = createA('http://127.0.0.1:5501/GlibDive/', '');
+  //link = createA('http://127.0.0.1:5501/GlibDive/', '');
   //link1 = createA('http://127.0.0.1:5501/GlibDive/', '');
   //link2 = createA('http://127.0.0.1:5501/AtTheEndOf/', '');
 
@@ -53,11 +53,11 @@ function draw() {
     if (choice == 1){
         link = link2;
       }*/  
-      
+   /*   
   if (frameCount == 500){
     next = createButton('next').parent(link); 
     next.position(width*.25, height*.75);
-  }
+  }*/
   
   
 }
