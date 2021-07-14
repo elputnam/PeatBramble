@@ -48,9 +48,10 @@ function draw() {
       particles.splice(i, 1);
     }
   }
-  if (j > txt.length){
-    j = 0;
-  }
+  // if (j > txt.length){
+  //   j = 0;
+  // }
+
   textOverlay();
 
     //choice
@@ -77,7 +78,7 @@ function textOverlay(){
     noStroke();
     fill(200);
     textFont('VT323');
-    text(txt[j], width*.05, height*.8);
+    text(txt[j], width*.05, height*.9);
     j += 1;
     }
 }
@@ -89,7 +90,7 @@ function grid(){
   for (var gridY = 0; gridY < tileCount; gridY++) {
     for (var gridX = 0; gridX < tileCount; gridX++) {
       var posX = width / tileCount * gridX;
-      var posY = height / tileCount * gridY;
+      var posY = height*.6 / tileCount * gridY;
 
 //select one of two options for grid
      var toggle = int(random(0, 3));
