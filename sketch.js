@@ -6,11 +6,18 @@ var col3;
 var col4;
 let particles = [];
 
+let j = 0;
+let txt = [];
+
 //let link;
 //let next; 
 //let link1;
 //let link2;
 //let link3;
+
+function preload() {
+  txt = loadStrings('peatBrambleText.txt');
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -19,7 +26,7 @@ function setup() {
   col2 = color(0, 50, 100, 40);
   col3 = color(200, 50, 100, 60);
   col4 = color(300, 100, 100, 60);
-  
+  frameRate(30);
   //link = createA('http://127.0.0.1:5501/GlibDive/', '');
   //link1 = createA('http://127.0.0.1:5501/GlibDive/', '');
   //link2 = createA('http://127.0.0.1:5501/AtTheEndOf/', '');
@@ -29,9 +36,7 @@ function setup() {
 }
 
 function draw() {
-  background(10, 1);
-
-  
+  background(10, 10);
   grid();
 
   //array of sqaures
@@ -43,6 +48,10 @@ function draw() {
       particles.splice(i, 1);
     }
   }
+  if (j > txt.length){
+    j = 0;
+  }
+  textOverlay();
 
     //choice
     /*
@@ -60,6 +69,17 @@ function draw() {
   }*/
   
   
+}
+
+function textOverlay(){
+    if (frameCount%30==0 ){
+    textSize(55);
+    noStroke();
+    fill(200);
+    textFont('VT323');
+    text(txt[j], width*.05, height*.8);
+    j += 1;
+    }
 }
 
 function grid(){
