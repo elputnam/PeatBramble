@@ -9,8 +9,8 @@ let particles = [];
 let j = 0;
 let txt = [];
 
-//let link;
-//let next; 
+let link;
+let next; 
 //let link1;
 //let link2;
 //let link3;
@@ -27,7 +27,7 @@ function setup() {
   col3 = color(200, 50, 100, 60);
   col4 = color(300, 100, 100, 60);
   frameRate(30);
-  //link = createA('http://127.0.0.1:5501/GlibDive/', '');
+  link = createA('http://fleshcircuit.github.io/GlibDrive/', '');
   //link1 = createA('http://127.0.0.1:5501/GlibDive/', '');
   //link2 = createA('http://127.0.0.1:5501/AtTheEndOf/', '');
 
@@ -37,6 +37,7 @@ function setup() {
 
 function draw() {
   background(10, 10);
+  console.log(frameCount);
   grid();
 
   //array of sqaures
@@ -52,7 +53,9 @@ function draw() {
   //   j = 0;
   // }
 
-  textOverlay();
+  if (frameCount >= 200){
+    textOverlay();
+  }
 
     //choice
     /*
@@ -63,11 +66,11 @@ function draw() {
     if (choice == 1){
         link = link2;
       }*/  
-   /*   
-  if (frameCount == 500){
+   
+  if (frameCount == 1600){
     next = createButton('next').parent(link); 
-    next.position(width*.25, height*.75);
-  }*/
+    next.position(width*.1, height*.1);
+  }
   
   
 }
