@@ -27,7 +27,7 @@ function setup() {
   col3 = color(200, 50, 100, 60);
   col4 = color(300, 100, 100, 60);
   frameRate(30);
-  link = createA('http://fleshcircuit.github.io/GlibDrive/', '');
+  link = createA('http://elputnam.github.io/GlibDrive/', '');
   //link1 = createA('http://127.0.0.1:5501/GlibDive/', '');
   //link2 = createA('http://127.0.0.1:5501/AtTheEndOf/', '');
 
